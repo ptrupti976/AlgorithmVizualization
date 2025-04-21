@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Sorting Algorithms</title>
+<link rel="stylesheet" href="intro.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="logo">
+        <a href="#"><img src="logo2.png" alt="logo"></a>
+		
+    </div>
+<div class="navbar">
+
+<div class="icon-bar" onclick="Show()">
+    <i></i>
+    <i></i>
+    <i></i>
+</div>
+
+<ul id="nav-lists">
+    <li class="close"><span onclick="Hide()">×</span></li>
+	 <li><a href="#" style="color: #76D7C4; font-weight: bold; font-style: italic;">Alorithm Visualizer</a></li>
+    <li><a href="HomePage.html">Home</a></li>
+	
+    <li><a href="Introduction(Sorting).html" >Sorting</a></li>
+    <li><a href="Introduction(PathFinding).html">Path-Finding</a></li>
+    <li><a href="Introduction(Tree-based).html">Tree-Based</a></li>
+</ul>
+
+</div>
+</div>
+
+
+<!--Slideshow-->
+<!-- Slideshow container -->
+
+<div class="slideshow-container">
+
+  <!-- Full-width images  -->
+  <div class="mySlides fade">
+    <img src="images/1.png" style="width:100%">  
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/2.png" style="width:100%">
+  </div>
+
+  <div class="mySlides fade">
+    <img src="images/3.png" style="width:100%">   
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="images/4.png" style="width:100%">   
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="images/5.png" style="width:100%">   
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="images/6.png" style="width:100%">   
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="images/7.png" style="width:100%">   
+  </div>
+  
+  <div class="mySlides fade">
+    <img src="images/8.png" style="width:100%">   
+  </div>
+  
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<!--the dots/circles
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div> 
+-->
+
+
+
+
+<div class="buttons-coll">
+  <a href="Sorting-Visualizer/index.html"><button class="custom-btn btn-1">Visualize ! </button></a>
+
+</div>
+
+
+
+
+<script>
+var navList = document.getElementById("nav-lists");
+function Show() {
+navList.classList.add("_Menus-show");
+}
+
+function Hide(){
+navList.classList.remove("_Menus-show");
+}
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+</script>
+
+
+
+<div class="footer">
+  <div style="background-color:black; color: #797D7F;" class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="#"style="color: white"> ALGORITHM VIZUALIZER </a>
+  </div>
+</div>
+
+
+
+</body>
+</html>
